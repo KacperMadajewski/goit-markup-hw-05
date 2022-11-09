@@ -54,6 +54,9 @@ body {
   text-decoration: none;
   cursor: pointer;
   color: #212121;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-items .link:hover,
@@ -74,6 +77,9 @@ body {
   text-decoration: none;
   cursor: pointer;
   color: var(--links-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-items-2 .link-2:hover,
@@ -257,7 +263,32 @@ body {
 }
 
 .section-table-box {
+  display: flex;
   width: 370px;
+  position: relative;
+}
+
+.describe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-item-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 .photos-description {
@@ -301,6 +332,9 @@ body {
   border: 1px solid;
   border-color: var(--icon-color);
   cursor: pointer;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
@@ -310,6 +344,9 @@ body {
   width: 106px;
   height: 60px;
   margin: 17.71px 32px 14.25px 32px;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-box:hover {
@@ -333,6 +370,9 @@ body {
   height: 44px;
   background-color: var(--white-item-color);
   border-radius: 50%;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-item > use {
@@ -367,6 +407,9 @@ body {
   width: 370px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  transition-property: border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .background-menu:hover {
@@ -374,6 +417,38 @@ body {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.background-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-portfolio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  margin: 0;
+  background: rgba(33, 150, 243, 0.9);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-portfolio-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--white-item-color);
+  margin-left: 24px;
+  margin-top: 49px;
+}
+
+.background-menu:hover .overlay-portfolio {
+  bottom: 0;
 }
 
 .adr {
@@ -405,9 +480,12 @@ body {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition-property: background, box-shadow, border, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navy-btn:hover {
-  background: #2196f3;
+  background: var(--hoover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -448,6 +526,9 @@ body {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icons:hover {
